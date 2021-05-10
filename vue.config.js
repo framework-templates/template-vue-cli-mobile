@@ -3,7 +3,7 @@
  * @Author: Weize
  * @Date: 2021-05-08 21:06:51
  * @LastEditors: Weize
- * @LastEditTime: 2021-05-10 18:28:51
+ * @LastEditTime: 2021-05-10 21:08:31
  */
 
 const path = require("path");
@@ -11,16 +11,15 @@ function resolve(dir) {
   return path.join(__dirname, dir);
 }
 const portfinder = require("portfinder");
-const isProduction = process.env.NODE_ENV === "production"
+const isProduction = process.env.NODE_ENV === "production";
 const externals = isProduction
-    ? {
-        vue: "Vue",
-        "vue-router": "VueRouter",
-        vuex: "Vuex",
-        axios: "axios",
-        mockjs: "Mock",
-      }
-    : {}
+  ? {
+      vue: "Vue",
+      "vue-router": "VueRouter",
+      vuex: "Vuex",
+      axios: "axios",
+    }
+  : {};
 
 module.exports = {
   publicPath: "./",
@@ -47,17 +46,17 @@ module.exports = {
     //   },
     // },
   },
-  // css:{
+  // css: {
   //   loaderOptions: {
-  //     // postcss: {
-  //     //     plugins: [
-          
-  //     //     ]
-  //     // }
-  //     postcssOptions:{
-  //       config: resolve("postcss.config.js"),
-  //     }
-  // }
+  //     postcss: {
+  //       // plugins: [
+
+  //       // ]
+  //       postcssOptions: {
+  //         config: resolve("postcss.config.js"),
+  //       },
+  //     },
+  //   },
   // },
   pluginOptions: {
     "style-resources-loader": {
@@ -72,8 +71,8 @@ module.exports = {
         "@": resolve("src"),
       },
       extensions: [".js", ".json", ".vue", ".css", ".less"],
-      // externals
     },
+    externals
   },
   chainWebpack(config) {
     // set svg-sprite-loader

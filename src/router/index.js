@@ -3,13 +3,12 @@
  * @Author: Weize
  * @Date: 2021-04-27 12:10:34
  * @LastEditors: Weize
- * @LastEditTime: 2021-04-27 21:06:14
+ * @LastEditTime: 2021-05-10 21:00:55
  */
 import Vue from "vue"
 import VueRouter from "vue-router"
 import home from "./home"
 Vue.use(VueRouter)
-
 const router = new VueRouter({
   routes: [
     {

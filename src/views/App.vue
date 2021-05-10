@@ -3,7 +3,7 @@
  * @Author: Weize
  * @Date: 2021-04-26 20:45:02
  * @LastEditors: Weize
- * @LastEditTime: 2021-05-08 17:32:40
+ * @LastEditTime: 2021-05-10 20:57:58
 -->
 
 <template>
@@ -17,7 +17,7 @@ export default {
     Layout,
   },
   mounted() {
-    console.log("$router", this.$router)
+    // console.log("$router", this.$router)
   },
 }
 </script>
